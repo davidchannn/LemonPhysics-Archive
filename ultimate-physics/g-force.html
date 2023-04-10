@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Gravitational Force - Lemon Physics</title>
+        <meta name="viewport" content="width=device-width, initial-scale=">
+        <link rel="preconnect" href="https://fonts.gstatic.com"> 
+        <link rel="shortcut icon" type="image/jpg" href="./Website-Pics/Lemon-logo.png">
+        <script src="g-force.js" defer></script>
+
+        <!--Fonts-->
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+
+        <!--Links-->
+        <link rel="stylesheet" href="main-background.css"/>
+        <link rel="stylesheet" href="g-force.css"/>
+    </head>
+    <body>
+        <div class="topnav">
+            <a href="home.html"><strong>Home</strong></a>
+            <a href="contact.html"><strong>Contact</strong></a>
+        </div>
+
+        <div class="g-force-header">
+            <br><br>
+            <p id="g-force-title"><img id="logo" src="./Website-Pics/Lemon-logo.png" height="70px" width="70px">  Gravitational Force</p>
+            <p id="g-force-pro">/gravəˈtāSH(ə)nəl fôrs/</p>
+            <p id="g-force-desc" style="font-size:18px;">"a natural phenomenon by which all things with mass or energy are brought toward one another."</p>
+            <br>
+        </div>
+
+        <br><br><br><br>
+
+        <div class="home">
+            <div class="container" align="center">
+                <h1><strong>Gravitational Force Calculator</strong></h1>
+                <h3>*F = G(m<sub>1</sub>m<sub>2</sub>)/r<sup>2</sup></h3>
+                <h4 id="instructions">Please select below what value is unknown and leave the respective field blank. Any responses in that field will be ignored in the calculation. Units will be in N, kg, and m.</h4>
+                <h5 style="max-width:500px;">*G is not an option to fill out because it is Newton's Gravitational constant (not to be mistaken with "little g", or the gravitational acceleration constant on Earth). G is equal to 6.67430 * 10<sup>-11</sup>.</h5>
+                <div id="userInput">
+                    <label for="g-forceInput">Force (f):</label>
+                    <input type="number" name="g-forceInput" id="f" step=".00000000000001" value="0"><br/><br/>
+
+                    <label for="m1Input">Mass 1 (m<sub>1</sub>):</label>
+                    <input type="number" name="timeInput" id="m1" min="0" oninput="validity.valid||(value='');" step=".00001" value="0"><br/><br/>
+
+                    <label for="m2Input">Mass 2 (m<sub>2</sub>):</label>
+                    <input type="number" name="viInput" id="m2" min="0" oninput="validity.valid||(value='');" step=".00001" value="0"><br/><br/>
+
+                    <label for="rInput">Distance (r):</label>
+                    <input type="number" name="rInput" id="r" min="0" oninput="validity.valid||(value='');" step=".00001" value="0"><br/><br/>
+                </div>
+                
+                <br><br>
+
+                <div class="inputs">
+                    <input type="radio" name="sign-area" id="box1"><b>Force</b>
+                    <input type="radio" name="sign-area" id="box2"><b>Mass 1 (m<sub>1</sub>)</b>
+                    <input type="radio" name="sign-area" id="box3"><b>Mass 2 (m<sub>2</sub>)</b>
+                    <input type="radio" name="sign-area" id="box4"><b>Distance (r)</b>
+                    <br><br>
+                </div>
+                <br/>
+                <button type="button" onclick="calc()">Calculate</button>
+        
+                <p id="answer"></p>
+                <p id="explanation"></p>
+
+                <br>
+                <h1><strong>Videos that may be helpful:</strong></h1>
+                <p id="instructions";>*Note: I do not own the following three videos. All three video creators are mentioned below.</p>
+                <br>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Ep1jIhHdf2A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p id="instructions">This video, made by The Organic Chemistry on YouTube, uses Newton's Law of Universal Gravitation in multiple problems.</p>
+                <br>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/kxkFaBG6a-A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p id="instructions">This video, made by Professor Dave on YouTube, describes the idea of Newton's Law of Universal Gravitation and how everything with mass has gravity.</p>
+                <br>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/7gf6YpdvtE0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p id="instructions">This video, explained by Dr. Shini Somara on Crash Course Physics, describes the history of Newton's Law of Universal Gravitation, how it works with other Newton and Kepler's laws nicely, and the relationship/proportionality between every variable.</p>
+            </div>
+        </div>
+    </body>
+</html>

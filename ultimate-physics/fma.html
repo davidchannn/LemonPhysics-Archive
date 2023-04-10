@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Newton's Second Law - Lemon Physics</title>
+        <meta name="viewport" content="width=device-width, initial-scale=">
+        <link rel="preconnect" href="https://fonts.gstatic.com"> 
+        <link rel="shortcut icon" type="image/jpg" href="./Website-Pics/Lemon-logo.png">
+        <script src="fma.js" defer></script>
+
+        <!--Fonts-->
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+
+        <!--Links-->
+        <link rel="stylesheet" href="main-background.css"/>
+        <link rel="stylesheet" href="fma.css"/>
+    </head>
+    <body>
+        <div class="topnav">
+            <a href="home.html"><strong>Home</strong></a>
+            <a href="contact.html"><strong>Contact</strong></a>
+        </div>
+
+        <div class="fma-header">
+            <br><br>
+            <p id="fma-title"><img id="logo" src="./Website-Pics/Lemon-logo.png" height="70px" width="70px">  Newton's Second Law</p>
+            <p id="fma-desc">The heavier an object, the more force it takes to accelerate it.</p>
+            <br>
+        </div>
+
+        <br><br><br><br>
+
+        <div class="home">
+            <div class="container" align="center">
+                <h1><strong>Newton's Second Law Calculator</strong></h1>
+                <h3>F = ma</h3>
+                <h4 id="instructions">Please select below what value is unknown and leave the respective field blank. Any responses in that field will be ignored in the calculation. Units will be in J, m/s, and kg.</h4>
+                <div id="userInput">
+                    <label for="massInput">Mass (m):</label>
+                    <input type="number" name="massInput" id="m" min="0" oninput="validity.valid||(value='');" step="0.001" value="0"><br/><br/>
+
+                    <label for="accelInput">Accleration (a):</label>
+                    <input type="number" name="accelInput" id="a" value="0"><br/><br/>
+
+                    <label for="fmaInput">Force (f):</label>
+                    <input type="number" name="fmaInput" id="f" value="0"><br/><br/>
+
+                    <label for="decimalInput">Decimal Places:</label>
+                    <select name="decimalInput" id="decimal" style="width:30px;">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2" selected>2 *Recommended</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select><br/><br/>
+                </div>
+                
+                
+                <div class="inputs">
+                    <input type="radio" name="sign-area" id="box1"><b>Mass</b>
+                    <input type="radio" name="sign-area" id="box2"><b>Acceleration</b>
+                    <input type="radio" name="sign-area" id="box3"><b>Force</b>
+                    <br><br>
+                </div>
+                <br/>
+                <button type="button" onclick="calc()">Calculate</button>
+        
+                <p id="answer"></p>
+                <p id="explanation"></p>
+
+                <br>
+                <h1><strong>Videos that may be helpful:</strong></h1>
+                <p id="instructions";>*Note: I do not own the following three videos. All three video creators are mentioned below.</p>
+                <br>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ou9YMWlJgkE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p id="instructions">This video, made by Sal Khan (founder of Khan Academy), talks about what Newton's Second Law is and describes an example using it.</p>
+                <br>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Ee6CHn0MRKE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p id="instructions">This video, made by The Organic Chemistry Teacher on YouTube, talks about the proportionality of all the variables in Newton's Second Law and goes over a few problems related to it.</p>
+                <br>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/xzA6IBWUEDE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p id="instructions">This video, made by Professor Dave on YouTube, describes what Newton's Second Law means.</p>
+                <br>
+            </div>
+        </div>
+    </body>
+</html>

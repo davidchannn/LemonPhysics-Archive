@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Contact - Lemon Physics</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="shortcut icon" type="image/jpg" href="./Website-Pics/Lemon-logo.png">  
+
+        <!--Fonts-->
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+
+        <!--Links-->
+        <link rel="stylesheet" href="main-background.css"/>
+        <link rel="stylesheet" href="contact.css"/>
+    </head>
+    <body>
+        <div class="topnav">
+            <a href="home.html"><strong>Home</strong></a>
+            <a class="active" href="contact.html"><strong>Contact</strong></a>
+        </div>
+
+        <div class="contact-header">
+            <br><br><br>
+            <p id="contact-title"><img id="logo" src="./Website-Pics/Lemon-logo.png" height="70px" width="70px">  Contact Me!</p>
+            <br>
+            <p id="contact-desc">I'd love to get your feedback!</p>
+            <br>
+        </div>
+
+        <div class="main-sect">
+            <section>
+                <p class="contact-info container">Thanks for checking out my website! This is the first major project I've ever done, and I am very open to any kind of feedback or new ideas related to the website. Please feel free to use the form below to reach out! If you'd like a response, you can include your email (if not, just leave it blank). Responses can be expected within 48 hours.</p>
+                <br>
+                <div class="container">
+                    <form id="my-form" action="https://formspree.io/f/mjvjvjpr" method="POST">
+                        <div class="form-group">
+                            <label for="firstName">First Name:</label>
+                            <input type="text" class="the-font" id="firstName" name="firstName">
+                        </div>
+            
+                        <div class="form-group">
+                            <label for="lastName">Last Name:</label>
+                            <input type="text" class="the-font" id="lastName" name="lastName">
+                        </div>
+            
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="text" class="the-font" id="email" name="email">
+                        </div>
+            
+                        <div class="form-group">
+                            <label for="message">Message:</label>
+                            <textarea id="message" class="the-font" name="message" rows="7" cols="50"></textarea>
+                        </div>
+            
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </body>
+</html>

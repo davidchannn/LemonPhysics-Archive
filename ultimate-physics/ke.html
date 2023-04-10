@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Kinetic Energy - Lemon Physics</title>
+        <meta name="viewport" content="width=device-width, initial-scale=">
+        <link rel="preconnect" href="https://fonts.gstatic.com"> 
+        <link rel="shortcut icon" type="image/jpg" href="./Website-Pics/Lemon-logo.png">
+        <script src="ke.js" defer></script>
+
+        <!--Fonts-->
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+
+        <!--Links-->
+        <link rel="stylesheet" href="main-background.css"/>
+        <link rel="stylesheet" href="ke.css"/>
+    </head>
+    <body>
+        <div class="topnav">
+            <a href="home.html"><strong>Home</strong></a>
+            <a href="contact.html"><strong>Contact</strong></a>
+        </div>
+
+        <div class="ke-header">
+            <br><br>
+            <p id="ke-title"><img id="logo" src="./Website-Pics/Lemon-logo.png" height="70px" width="70px">  Kinetic Energy</p>
+            <p id="ke-pro">/kəˈnedik ˈenərjē/</p>
+            <p id="ke-desc">"energy which a body possesses by virtue of being in motion."</p>
+            <br>
+        </div>
+
+        <br><br><br><br>
+
+        <div class="home">
+            <div class="container" align="center">
+                <h1><strong>Kinetic Energy Calculator</strong></h1>
+                <h3>KE = <span class="f"><div class="n">1</div><div class="d">2</div></span>mv<sup>2</sup></h3>
+                <h4 id="instructions">Please select below what value is unknown and leave the respective field blank. Any responses in that field will be ignored in the calculation. Units will be in J, m/s, and kg.</h4>
+                <div id="userInput">
+                    <label for="keInput">Kinetic Energy (KE):</label>
+                    <input type="number" name="keInput" id="ke" min="0" oninput="validity.valid||(value='');" step=".00001" value="0"><br/><br/>
+
+                    <label for="massInput">Mass (m):</label>
+                    <input type="number" name="massInput" id="m" min="0" oninput="validity.valid||(value='');" step=".00001" value="0"><br/><br/>
+
+                    <label for="velocityInput">Velocity (v):</label>
+                    <input type="number" name="velocityInput" id="v" step=".00001" value="0"><br/><br/>
+
+                    <label for="decimalInput">Decimal Places:</label>
+                    <select name="decimalInput" id="decimal" style="width:30px;">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2" selected>2 *Recommended</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select><br/><br/>
+                </div>
+                
+                
+                <div class="inputs">
+                    <input type="radio" name="sign-area" id="box1"><b>Kinetic Energy</b>
+                    <input type="radio" name="sign-area" id="box2"><b>Mass</b>
+                    <input type="radio" name="sign-area" id="box3"><b>Velocity</b>
+                    <br><br>
+                </div>
+                <br/>
+                <button type="button" onclick="calc()">Calculate</button>
+        
+                <p id="answer"></p>
+                <p id="explanation"></p>
+
+                <br>
+                <h1><strong>Videos that may be helpful:</strong></h1>
+                <p id="instructions";>*Note: I do not own the following four videos. All three video creators are mentioned below.</p>
+                <br>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/g7u6pIfUVy4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p id="instructions">This video, made by Professor Dave on YouTube, describes what kinetic and potential energy (<a href="pe.html">calculator link can be found here</a>) is and derives the equations related to energy.</p>
+                <br>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/OTK9JrKC6EY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p id="instructions">This video, made by Professor Dave on YouTube, focuses on the conservation of energy by talking about many different types of energy and how even though the type of energy might change, the total (mechanical) energy within a system is always conserved.</p>
+                <br>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/e-CAW3fN68M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p id="instructions">This video, made by Mahesh Shenoy on Khan Academy, describes the fundamentals of energy.</p>
+                <br>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/zDcf7eEaP0M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p>This video, made by Paul Andersen, describes what kinetic energy is and explains the relationship between potential energy (<a href="pe.html">calculator link can be found here</a>) and kinetic energy</p>
+                <br>
+            </div>
+        </div>
+    </body>
+</html>

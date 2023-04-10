@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Acceleration - Lemon Physics</title>
+        <meta name="viewport" content="width=device-width, initial-scale=">
+        <link rel="preconnect" href="https://fonts.gstatic.com"> 
+        <link rel="shortcut icon" type="image/jpg" href="./Website-Pics/Lemon-logo.png">
+        <script src="accel.js" defer></script>
+
+        <!--Fonts-->
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+
+        <!--Links-->
+        <link rel="stylesheet" href="main-background.css"/>
+        <link rel="stylesheet" href="accel.css"/>
+    </head>
+    <body>
+        <div class="topnav">
+            <a href="home.html"><strong>Home</strong></a>
+            <a href="contact.html"><strong>Contact</strong></a>
+        </div>
+
+        <div class="accel-header">
+            <br><br>
+            <p id="accel-title"><img id="logo" src="./Website-Pics/Lemon-logo.png" height="70px" width="70px">  Acceleration</p>
+            <p id="accel-pro">/akˌseləˈrāSH(ə)n/</p>
+            <p id="accel-desc">"the rate of change of velocity per unit of time."</p>
+            <br>
+        </div>
+
+        <br><br><br><br>
+
+        <div class="home">
+            <div class="container" align="center">
+                <h1><strong>Acceleration Calculator</strong></h1>
+                <h3>a = (v<sub>f</sub> - v<sub>0</sub>)/t</h3>
+                <h4 id="instructions">Please select below what value is unknown and leave the respective field blank. Any responses in that field will be ignored in the calculation. Units will be in m/s<sup>2</sup>, m/s, and s.</h4>
+                <div id="userInput">
+                    <label for="accelInput">Accleration (a):</label>
+                    <input type="number" name="accelInput" id="a" step=".00001" value="0"><br/><br/>
+
+                    <label for="timeInput">Time (t):</label>
+                    <input type="number" name="timeInput" id="t" min="0" oninput="validity.valid||(value='');" step=".00001" value="0"><br/><br/>
+
+                    <label for="viInput">Initial Velocity (v<sub>0</sub>):</label>
+                    <input type="number" name="viInput" id="vi" step=".00001" value="0"><br/><br/>
+
+                    <label for="vfInput">Final Velocity (v<sub>f</sub>):</label>
+                    <input type="number" name="vfInput" id="vf" step=".00001" value="0"><br/><br/>
+
+                    <label for="decimalInput">Decimal Places:</label>
+                    <select name="decimalInput" id="decimal" style="width:30px;">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2" selected>2 *Recommended</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select><br/><br/>
+                </div>
+                
+                
+                <div class="inputs">
+                    <input type="radio" name="sign-area" id="box1"><b>Accleration</b>
+                    <input type="radio" name="sign-area" id="box2"><b>Time</b>
+                    <input type="radio" name="sign-area" id="box3"><b>Initial Velocity (V<sub>0</sub>)</b>
+                    <input type="radio" name="sign-area" id="box4"><b>Final Velocity (V<sub>f</sub>)</b>
+                    <br><br>
+                </div>
+                <br/>
+                <button type="button" onclick="calc()">Calculate</button>
+        
+                <p id="answer"></p>
+                <p id="explanation"></p>
+
+                <br>
+                <h1><strong>Videos that may be helpful:</strong></h1>
+                <p id="instructions";>*Note: I do not own the following two videos. All two video creators are mentioned below.</p>
+                <br>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/FOkQszg1-j8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p id="instructions">This video, made by Sal Khan (founder of Khan Academy), breaks down the formula for acceleration and provides a real life example of it.</p>
+                <br>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/4dCrkp8qgLU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p id="instructions">This video, made by Professor Dave on YouTube, describes what acceleration, speed, and position is, the proportionality between all three variables, and how to solve for each component.</p>
+                <br>
+            </div>
+        </div>
+    </body>
+</html>

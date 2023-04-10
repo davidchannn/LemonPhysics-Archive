@@ -1,0 +1,38 @@
+body{
+    background-color:white;
+}
+
+.topnav {
+    z-index:1;
+    position:fixed;
+    top:0px;
+    left:0px;
+    right:0px;
+    overflow: hidden;
+    background-color:rgba(41, 41, 41);
+}
+  
+.topnav a {
+    font-family: 'Poppins', sans-serif;
+    float: left;
+    color: rgb(255, 255, 255);
+    text-align: justify;
+    padding: 1% 1.5%;
+    text-decoration: none;
+    font-size: 3vh;
+}
+  
+.topnav a:hover {
+    font-family: 'Poppins', sans-serif;
+    color: rgb(249, 212, 0);
+  }
+  
+.topnav a.active {
+    font-family: 'Poppins', sans-serif;
+    background-color:rgb(249, 212, 0);
+    color: black;
+}
+
+.the-font {
+    font-family: 'Poppins', sans-serif;
+}

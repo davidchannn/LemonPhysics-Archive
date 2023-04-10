@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Momentum - Lemon Physics</title>
+        <meta name="viewport" content="width=device-width, initial-scale=">
+        <link rel="preconnect" href="https://fonts.gstatic.com"> 
+        <link rel="shortcut icon" type="image/jpg" href="./Website-Pics/Lemon-logo.png">
+        <script src="momentum.js" defer></script>
+
+        <!--Fonts-->
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+
+        <!--Links-->
+        <link rel="stylesheet" href="main-background.css"/>
+        <link rel="stylesheet" href="momentum.css"/>
+    </head>
+    <body>
+        <div class="topnav">
+            <a href="home.html"><strong>Home</strong></a>
+            <a href="contact.html"><strong>Contact</strong></a>
+        </div>
+
+        <div class="momentum-header">
+            <br><br>
+            <p id="momentum-title"><img id="logo" src="./Website-Pics/Lemon-logo.png" height="70px" width="70px">  Momentum</p>
+            <p id="momentum-pro">/mōˈmen(t)əm,məˈmen(t)əm/</p>
+            <p id="momentum-desc">"the quantity of motion of a moving body, measured as a product of its mass and velocity."</p>
+            <br>
+        </div>
+
+        <br><br><br><br>
+
+        <div class="home">
+            <div class="container" align="center">
+                <h1><strong>Momentum Calculator</strong></h1>
+                <h3>p = mv</h3>
+                <h4 id="instructions">Please select below what value is unknown and leave the respective field blank. Any responses in that field will be ignored in the calculation. Units will be in kg, m/s, and kg m/s.</h4>
+                <div id="userInput">
+                    <label for="massInput">Mass (m):</label>
+                    <input type="number" name="massInput" id="m" min="0" oninput="validity.valid||(value='');" step=".00001" value="0"><br/><br/>
+
+                    <label for="velocityInput">Velocity (v):</label>
+                    <input type="number" name="velocityInput" id="v" step=".00001" value="0"><br/><br/>
+
+                    <label for="momentumInput">Momentum (p):</label>
+                    <input type="number" name="momentumInput" id="p" step=".00001" value="0"><br/><br/>
+
+                    <label for="decimalInput">Decimal Places:</label>
+                    <select name="decimalInput" id="decimal" style="width:30px;">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2" selected>2 *Recommended</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select><br/><br/>
+                </div>
+
+                <div class="inputs">
+                    <input type="radio" name="sign-area" id="box1"><b>Mass</b>
+                    <input type="radio" name="sign-area" id="box2"><b>Velocity</b>
+                    <input type="radio" name="sign-area" id="box3"><b>Momentum</b>
+                    <br><br>
+                </div>
+                
+                <br/>
+                <button type="button" onclick="calc()">Calculate</button>
+        
+                <p id="answer"></p>
+                <p id="explanation"></p>
+
+                <br>
+                <h1><strong>Videos that may be helpful:</strong></h1>
+                <p id="instructions";>*Note: I do not own the following three videos. All three video creators are mentioned below.</p>
+                <br>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/RKERiyi2mlk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p id="instructions">This video, made by Paul Anderson, describes how to solve a linear momentum problem by analyzing a graph relating to height and time.</p>
+                <br>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/XFhntPxow0U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p id="instructions">This video, made by Sal Khan (founder of Khan Academy), describes what linear momentum is, how it relates to Impluse and Newton's Second Law (<a href="fma.html">calculator link can be found here</a>), and an example of a linear momentum problem.</p>
+                <br>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Fp7D5D8Bqjc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <p id="instructions">This video, made by The Organic Chemistry Teacher on YouTube, goes over multiple linear momentum problems and how to solve them.</p>
+                <br>
+            </div>
+        </div>
+    </body>
+</html>
